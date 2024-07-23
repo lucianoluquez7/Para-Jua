@@ -17,10 +17,13 @@
             height: 100vh;
             margin: 0;
             color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
         }
         h1 {
             font-size: 3em;
             margin-bottom: 20px;
+            text-align: center;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         form {
@@ -29,6 +32,9 @@
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0,0,0,0.3);
             text-align: center;
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
         }
         p {
             font-size: 1.5em;
@@ -56,11 +62,34 @@
         .gallery {
             margin: 20px 0;
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
+            justify-content: center;
         }
         .gallery img {
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        @media (min-width: 600px) {
+            h1 {
+                font-size: 4em;
+            }
+            p {
+                font-size: 1.5em;
+            }
+            label {
+                font-size: 1.5em;
+            }
+            button {
+                font-size: 1.5em;
+            }
+            .gallery img {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -90,9 +119,9 @@
             const formData = new FormData(event.target);
             const respuesta = formData.get('respuesta');
             if (respuesta === 'si') {
-                alert('¡Sí! ¡Me haces muy feliz!');
+                alert('Graciass, te amo con todo mi corazón!! Te voy a hacer la mas feliz del mundo!!!');
             } else {
-                alert('Oh... qué pena. De todas formas, gracias por responder.');
+                alert('Mal ahí, la próxima será.');
             }
         });
     </script>
