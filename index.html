@@ -6,50 +6,66 @@
     <title>¿Quieres ser mi novia?</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('https://example.com/background.jpg'); /* Cambia esta URL por una imagen de fondo romántica */
+            background-size: cover;
+            background-position: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
+            color: #fff;
         }
         h1 {
-            color: #333;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         form {
-            background-color: #fff;
+            background-color: rgba(255, 192, 203, 0.8);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
             text-align: center;
         }
+        p {
+            font-size: 1.5em;
+        }
+        label {
+            font-size: 1.2em;
+        }
         button {
-            background-color: #4CAF50;
+            background-color: #ff69b4;
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
         }
         button:hover {
-            background-color: #45a049;
+            background-color: #ff1493;
+        }
+        .heart {
+            color: #ff69b4;
+            font-size: 2em;
         }
     </style>
 </head>
 <body>
-    <h1>Juana, ¿quieres ser mi novia?</h1>
+    <h1>Jua, ¿querés ser mi novia?</h1>
     <form id="noviaForm">
         <p>Por favor, selecciona una opción:</p>
         <label>
             <input type="radio" name="respuesta" value="si" required>
-            Sí
+            Sí <span class="heart">❤</span>
         </label><br>
         <label>
             <input type="radio" name="respuesta" value="no" required>
-            No
+            No <span class="heart">💔</span>
         </label><br><br>
         <button type="submit">Enviar</button>
     </form>
@@ -60,9 +76,9 @@
             const formData = new FormData(event.target);
             const respuesta = formData.get('respuesta');
             if (respuesta === 'si') {
-                alert('Gracias amor! Te amooo!!');
+                alert('Gracias!! Te amo con todo mi corazón!!');
             } else {
-                alert('Mal ahí, la próxima será');
+                alert('Mal ahí, la proóxima será.');
             }
         });
     </script>
