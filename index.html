@@ -53,10 +53,24 @@
             color: #ff69b4;
             font-size: 2em;
         }
+        .gallery {
+            margin: 20px 0;
+            display: flex;
+            gap: 10px;
+        }
+        .gallery img {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
     <h1>Jua, ¿querés ser mi novia?</h1>
+    <div class="gallery">
+        <img src="https://drive.google.com/file/d/1wbzfGjOqn8BbyN6Og24EcaakKvTKnUHq/view?usp=drive_link" alt="Imagen 1" width="200">
+        <img src="https://example.com/tu-imagen2.jpg" alt="Imagen 2" width="200">
+        <img src="https://example.com/tu-imagen3.jpg" alt="Imagen 3" width="200">
+    </div>
     <form id="noviaForm">
         <p>Por favor, selecciona una opción:</p>
         <label>
@@ -76,9 +90,9 @@
             const formData = new FormData(event.target);
             const respuesta = formData.get('respuesta');
             if (respuesta === 'si') {
-                alert('Gracias!! Te amo con todo mi corazón!! Te voy a hacer la más felíz del mundo');
+                alert('¡Sí! ¡Me haces muy feliz!');
             } else {
-                alert('Mal ahí, la proóxima será.');
+                alert('Oh... qué pena. De todas formas, gracias por responder.');
             }
         });
     </script>
